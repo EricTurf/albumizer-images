@@ -1,0 +1,10 @@
+FROM alpine
+
+RUN apk add ffmpeg python3 py-pip \ 
+    && pip install youtube_dl
+
+RUN youtube-dl --version
+
+WORKDIR /video
+
+ENTRYPOINT ["youtube-dl"]
