@@ -1,7 +1,7 @@
 FROM alpine
 
 RUN apk add ffmpeg python3 py-pip \ 
-    && pip install youtube_dl
+    && pip install --no-cache-dir youtube_dl
 
 RUN youtube-dl --version
 
